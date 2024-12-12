@@ -1,0 +1,52 @@
+/* Allow copying */
+.codicon-none {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+}
+
+/* Hide errors */
+div.monaco-hover-content:has(.codicon-none)>.hover-row:first-child {
+    display: none !important;
+}
+
+div.monaco-hover-content:has([style="color:#f96363;"])>.hover-row:first-child {
+    display: none !important
+}
+
+/* Change order */
+.monaco-hover .monaco-hover-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.monaco-hover .monaco-hover-content .hover-row {
+    order: 2;
+}
+
+.monaco-hover .monaco-hover-content .hover-row:has(.codicon-none) {
+    order: 1;
+}
+
+.monaco-hover .monaco-hover-content .hover-row:has([style="color:#f96363;"]) {
+    order: 1;
+}
+
+/* Remove shadow from tab section */
+.monaco-editor .scroll-decoration {
+    display: none;
+}
+
+/* Add the same color of the the to the status bar */
+.statusbar {
+    background-color: #1d1b33 !important;
+}
+
+/*  Tabs container */
+
+.tabs-container {
+    background-color: #1d1b33;
+}
+
+.monaco-workbench .part.editor>.content .editor-group-container.active>.title .tabs-container>.tab {
+    background-color: #1d1b33;
+}
